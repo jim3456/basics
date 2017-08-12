@@ -85,4 +85,5 @@ class DB_CONN(object):
             log.error('error with params {}'.format(params))
             log.error(print_error())
             log.error(print_trace())
-    
+
+print("test")
