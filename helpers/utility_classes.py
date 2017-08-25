@@ -10,3 +10,7 @@ class EnumBase(object):
     @classmethod
     def fromstring(cls, name):
         return cls.__dict__[name]
+    
+    @classmethod
+    def all_values(cls, name):
+        return sorted(cls.__dict__.itervalues())
