@@ -5,7 +5,7 @@ class EnumBase(object):
     '''
     @classmethod
     def tostring(cls, value):
-        return dict((v,k) for k,v in cls.__dict__.iteritems())[value]
+        return dict([(v,k) for k,v in cls.__dict__.items() if type(v)==int])[value]
 
     @classmethod
     def fromstring(cls, name):
@@ -13,4 +13,4 @@ class EnumBase(object):
     
     @classmethod
     def all_values(cls):
-        return sorted(cls.__dict__.itervalues())
+        return sorted([i for i in cls.__dict__.values() if type(i)==int])
