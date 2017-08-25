@@ -12,5 +12,5 @@ class EnumBase(object):
         return cls.__dict__[name]
     
     @classmethod
-    def all_values(cls, name):
+    def all_values(cls):
         return sorted(cls.__dict__.itervalues())
